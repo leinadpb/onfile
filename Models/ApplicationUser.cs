@@ -21,12 +21,12 @@ namespace OnFile.Models
         public DateTime Birthdate { get; set; }
 
         [DataType(DataType.Date)]
-        private DateTime SignInDate;
+        private DateTime _SignInDate;
 
-        public DateTime MyProperty
+        public DateTime SignInDate
         {
-            get { return SignInDate; }
-            set { SignInDate = DateTime.Now.Date; }
+            get { return _SignInDate; }
+            set { _SignInDate = DateTime.Now.Date; }
         }
 
         public string Website { get; set; }
