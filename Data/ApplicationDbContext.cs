@@ -25,22 +25,32 @@ namespace OnFile.Data
             // ApplicationUser - BuyedFile (1 - *)
             builder.Entity<BuyedFile>()
                 .HasOne(bf => bf.ApplicationUser)
-                .WithMany(au => au.BuyedFiles);
+                .WithMany(au => au.BuyedFiles)
+                .HasForeignKey(bf => bf.ApplicationUserID);
 
             // ApplicationUser - WishList (1 - *)
             builder.Entity<WishList>()
                 .HasOne(wl => wl.ApplicationUser)
-                .WithMany(au => au.WishLists);
+                .WithMany(au => au.WishLists)
+                .HasForeignKey(wl => wl.ApplicationUserID);
 
             // ApplicationUser - UploadedFile (1 - *)
             builder.Entity<UploadedFile>()
                 .HasOne(uf => uf.ApplicationUser)
-                .WithMany(au => au.UploadedFiles);
+                .WithMany(au => au.UploadedFiles)
+                .HasForeignKey(uf => uf.ApplicationUserID);
 
             // WishList - UploadedFile (1 - *)
             builder.Entity<UploadedFile>()
                 .HasOne(uf => uf.WishList)
-                .WithMany(wl => wl.UploadedFiles);
+                .WithMany(wl => wl.UploadedFiles)
+                .HasForeignKey(uf => uf.WishListID);
+
+            // BuyedFile - UploadedFile (1 - 1)
+            builder.Entity<BuyedFile>()
+                .HasOne(bf => bf.UploadedFile)
+                .WithOne(uf => uf.BuyedFile)
+                .HasForeignKey<UploadedFile>(bf => bf.UploadedFileID);
 
            
         }

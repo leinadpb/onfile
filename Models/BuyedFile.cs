@@ -15,6 +15,9 @@ namespace OnFile.Models
         public int ApplicationUserID { get; set; }
         public ApplicationUser ApplicationUser { get; set; }
 
+        public int UploadedFileID { get; set; }
+        public UploadedFile UploadedFile { get; set; }
+
 
     }
 }

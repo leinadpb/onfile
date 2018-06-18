@@ -60,6 +60,8 @@ namespace OnFile.Models
         public int WishListID { get; set; }
         public WishList WishList { get; set; }
 
+        public BuyedFile BuyedFile { get; set; }
+
 
     }
 }
