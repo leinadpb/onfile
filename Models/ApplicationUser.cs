@@ -32,5 +32,9 @@ namespace OnFile.Models
         public string Website { get; set; }
 
         public string ProfilePictureUrl { get; set; }
+
+        //Navigation Properties
+        public ICollection<File> Files { get; set; }
+
     }
 }

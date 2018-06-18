@@ -36,9 +36,15 @@ namespace OnFile.Models
         //Navigation Properties
         public ICollection<OptionalPicture> OptionalPictures { get; set; }
 
+        public int WishListID { get; set; }
         public WishList WishList { get; set; }
 
+        public int BuyedFileID { get; set; }
         public BuyedFile BuyedFile { get; set; }
-        
+
+        public int ApplicationUserID { get; set; }
+        public ApplicationUser ApplicationUser { get; set; }
+
+
     }
 }

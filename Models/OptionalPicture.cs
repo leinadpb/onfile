@@ -14,7 +14,8 @@ namespace OnFile.Models
         public string PictureUrl { get; set; }
 
         //Navigation Properties
+        public int FileID { get; set; }
         public File File { get; set; }
-
+        
     }
 }
