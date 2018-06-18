@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations;
 
 namespace OnFile.Models
 {
@@ -11,11 +11,14 @@ namespace OnFile.Models
         [Key]
         public int OptionalPictureID { get; set; }
 
+        [Required(ErrorMessage = "Please, upload a picture.")]
+        [StringLength(1800, ErrorMessage = "Url is too long.")]
         public string PictureUrl { get; set; }
 
         //Navigation Properties
-        public int FileID { get; set; }
-        public File File { get; set; }
-        
+        public int UploadedFileID { get; set; }
+        public UploadedFile UploadedFile { get; set; }
+
+
     }
 }

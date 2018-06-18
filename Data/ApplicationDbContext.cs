@@ -22,27 +22,27 @@ namespace OnFile.Data
             // For example, you can rename the ASP.NET Identity table names and more.
             // Add your customizations after calling base.OnModelCreating(builder);
 
-            // 1 File -> * OptionalPicture
-            builder.Entity<OptionalPicture>()
-                .HasOne(op => op.File)
-                .WithMany(f => f.OptionalPictures);
+            // ApplicationUser - BuyedFile (1 - *)
+            builder.Entity<BuyedFile>()
+                .HasOne(bf => bf.ApplicationUser)
+                .WithMany(au => au.BuyedFiles);
 
-            // 1 BuyedFile -> * Files
-            builder.Entity<File>()
-                .HasOne(f => f.BuyedFile)
-                .WithMany(bf => bf.Files);
+            // ApplicationUser - WishList (1 - *)
+            builder.Entity<WishList>()
+                .HasOne(wl => wl.ApplicationUser)
+                .WithMany(au => au.WishLists);
 
-            // 1 WishList -> * Files
-            builder.Entity<File>()
-                .HasOne(f => f.WishList)
-                .WithMany(wl => wl.Files);
+            // ApplicationUser - UploadedFile (1 - *)
+            builder.Entity<UploadedFile>()
+                .HasOne(uf => uf.ApplicationUser)
+                .WithMany(au => au.UploadedFiles);
 
-            // 1 ApplicationUser -> * Files
-            builder.Entity<File>()
-                .HasOne(f => f.ApplicationUser)
-                .WithMany(au => au.Files);
+            // WishList - UploadedFile (1 - *)
+            builder.Entity<UploadedFile>()
+                .HasOne(uf => uf.WishList)
+                .WithMany(wl => wl.UploadedFiles);
 
-            //
+           
         }
     }
 }

@@ -12,10 +12,9 @@ namespace OnFile.Models
         public int BuyedFileID { get; set; }
 
         //Navigation Properties
-        public ICollection<File> Files { get; set; }
-
-        public ApplicationUser User { get; set; }
         public int ApplicationUserID { get; set; }
+        public ApplicationUser ApplicationUser { get; set; }
+
 
     }
 }

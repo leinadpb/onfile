@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Identity;
 
 namespace OnFile.Models
 {
-    // Add profile data for application users by adding properties to the ApplicationUser class
     public class ApplicationUser : IdentityUser
     {
         [Required(ErrorMessage = "Please, provide your firstname")]
@@ -33,8 +32,13 @@ namespace OnFile.Models
 
         public string ProfilePictureUrl { get; set; }
 
+
         //Navigation Properties
-        public ICollection<File> Files { get; set; }
+        public ICollection<BuyedFile> BuyedFiles { get; set; }
+        public ICollection<WishList> WishLists { get; set; }
+        public ICollection<UploadedFile> UploadedFiles { get; set; }
+
+
 
     }
 }
