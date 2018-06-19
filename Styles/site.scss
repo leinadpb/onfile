@@ -7,6 +7,7 @@
 
 //Colors
 $primary-color: #24323D;
+$accent2-color: #202C36;
 $secondary-color: #8AAEBE;
 $accent-color: #868C8A;
 $ligth-color: #F2E1C7;
@@ -23,22 +24,121 @@ $serif-kurale: 'Kurale', serif;
 $serif-karla: 'Karla', sans-serif;
 $serif-lora: 'Lora', serif;
 
-.main-content{
-    text-align:center;
-    margin-top:1.25em;
-    margin-bottom:1.0em;
-    padding-left:0.30em;
-    padding-right:0.30em;
-    .title{
-        h1{
+//LAYOUT
+.navbar-inverse{
+    a{
+        color:$ligth2-color;
+    }
+    a:hover{
+        color:$secondary-color;
+    }
+}
+//HOME
+.main-content {
+    text-align: center;
+    margin-top: 1.25em;
+    margin-bottom: 1.0em;
+    padding-left: 0.30em;
+    padding-right: 0.30em;
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+
+    .title {
+        h1 {
             color: $primary-color;
-            font-size:1.83rem;
-            font-family:$sans-merriweather;
+            font-size: 2.13rem;
+            font-family: $sans-merriweather;
         }
+
+        p {
+            color: $secondary-color;
+            font-size: 1.42rem;
+            font-family: $serif-merriweather;
+        }
+    }
+}
+.top-content{
+    padding-top:1.5em;
+    padding-bottom:1.5em;
+    background-color:$primary-color;
+}
+.top-files-title {
+    margin-top: 0.7em;
+    margin-left: 0.7em;
+    margin-right: 0.7em;
+    margin-bottom: 1.5em;
+    padding-left: 2.5em;
+
+    h2 {
+        color: $primary-color;
+        font-family: $sans-merriweather;
+        font-weight: 600;
+        font-size: 1.4em;
+        color: $ligth2-color;
+    }
+}
+.top-files {
+    margin-bottom:1.7em;
+    margin-top:1.0em;
+    padding-left:2.0em;
+    padding-right:2.0em;
+    .box {
+        width: 7.0em;
+        height: 7.0em;
+        -webkit-transition: width 0.2s; /* Safari */
+        transition: width 0.2s;
         p{
+            color:$primary-color;
+            font-weight:300;
             color:$secondary-color;
-            font-size:1.12rem;
-            font-family:$serif-merriweather;
+        }
+    }
+
+    .box:hover {
+        width: 7.6em;
+        height: 7.6em;
+        cursor:pointer;
+        p{
+            font-weight:600;
+            color:white;
+        }
+    }
+}
+
+//REGISTER
+.no-main-page {
+    .page-title {
+        margin-top: 2.0em;
+        margin-bottom: 1.15em;
+        color: $primary-color;
+        font-family: $sans-merriweather;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .page-form {
+        text-align: center;
+
+        .form-subtitle {
+            color: $secondary-color;
+            font-weight: 200;
+            font-family:$sans-josefin;
+            padding: 0.7em;
+        }
+
+        .btn-onfile-main {
+            background-color: $primary-color;
+            color: $ligth2-color;
+            -webkit-transition: width 0.2s; /* Safari */
+            transition: width 0.2s;
+        }
+
+        .btn-onfile-main:hover {
+            background-color: $accent2-color;
+            color:white;
+        }
+        label{
+            font-weight:600;
         }
     }
 }

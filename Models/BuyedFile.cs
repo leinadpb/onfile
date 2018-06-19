@@ -12,7 +12,7 @@ namespace OnFile.Models
         public int BuyedFileID { get; set; }
 
         //Navigation Properties
-        public int ApplicationUserID { get; set; }
+        public string ApplicationUserID { get; set; }
         public ApplicationUser ApplicationUser { get; set; }
 
         public int UploadedFileID { get; set; }

@@ -5,17 +5,93 @@
     TYPE: .SCSS
 */
 @import url("https://fonts.googleapis.com/css?family=Arvo|Josefin+Sans|Karla|Kurale|Lora|Merriweather|Merriweather+Sans|Raleway|Raleway+Dots");
+.navbar-inverse a {
+  color: #DACAB3; }
+
+.navbar-inverse a:hover {
+  color: #8AAEBE; }
+
 .main-content {
   text-align: center;
   margin-top: 1.25em;
   margin-bottom: 1.0em;
   padding-left: 0.30em;
-  padding-right: 0.30em; }
+  padding-right: 0.30em;
+  padding-top: 2.5em;
+  padding-bottom: 2.5em; }
   .main-content .title h1 {
     color: #24323D;
-    font-size: 1.83rem;
+    font-size: 2.13rem;
     font-family: "Merriweather Sans", sans-serif; }
   .main-content .title p {
     color: #8AAEBE;
-    font-size: 1.12rem;
+    font-size: 1.42rem;
     font-family: "Merriweather", serif; }
+
+.top-content {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  background-color: #24323D; }
+
+.top-files-title {
+  margin-top: 0.7em;
+  margin-left: 0.7em;
+  margin-right: 0.7em;
+  margin-bottom: 1.5em;
+  padding-left: 2.5em; }
+  .top-files-title h2 {
+    color: #24323D;
+    font-family: "Merriweather Sans", sans-serif;
+    font-weight: 600;
+    font-size: 1.4em;
+    color: #DACAB3; }
+
+.top-files {
+  margin-bottom: 1.7em;
+  margin-top: 1.0em;
+  padding-left: 2.0em;
+  padding-right: 2.0em; }
+  .top-files .box {
+    width: 7.0em;
+    height: 7.0em;
+    -webkit-transition: width 0.2s;
+    /* Safari */
+    transition: width 0.2s; }
+    .top-files .box p {
+      color: #24323D;
+      font-weight: 300;
+      color: #8AAEBE; }
+  .top-files .box:hover {
+    width: 7.6em;
+    height: 7.6em;
+    cursor: pointer; }
+    .top-files .box:hover p {
+      font-weight: 600;
+      color: white; }
+
+.no-main-page .page-title {
+  margin-top: 2.0em;
+  margin-bottom: 1.15em;
+  color: #24323D;
+  font-family: "Merriweather Sans", sans-serif;
+  font-weight: 600;
+  text-align: center; }
+
+.no-main-page .page-form {
+  text-align: center; }
+  .no-main-page .page-form .form-subtitle {
+    color: #8AAEBE;
+    font-weight: 200;
+    font-family: "Josefin Sans", sans-serif;
+    padding: 0.7em; }
+  .no-main-page .page-form .btn-onfile-main {
+    background-color: #24323D;
+    color: #DACAB3;
+    -webkit-transition: width 0.2s;
+    /* Safari */
+    transition: width 0.2s; }
+  .no-main-page .page-form .btn-onfile-main:hover {
+    background-color: #202C36;
+    color: white; }
+  .no-main-page .page-form label {
+    font-weight: 600; }

@@ -27,7 +27,7 @@ namespace OnFile
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlServer(Configuration.GetConnectionString("OnFileLocalServer")));
 
             services.AddIdentity<ApplicationUser, IdentityRole>(options => {
                 
@@ -43,7 +43,6 @@ namespace OnFile
 
                 //User settings
                 options.User.RequireUniqueEmail = true;
-                options.User.AllowedUserNameCharacters = ".ABCDEFGHIJKLMNOPQRSTUVwxyzabcdefghijklmnopqrstuvwxyz0123456789";
             })
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();

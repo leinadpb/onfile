@@ -7,3 +7,9 @@ gulp.task("site-sass", function () {
         .pipe(sass())
         .pipe(gulp.dest('wwwroot/css'));
 });
+
+gulp.task("site-bootstrap", function () {
+    return gulp.src('Styles/Bootstrap/scss/bootstrap.scss')
+        .pipe(sass())
+        .pipe(gulp.dest('wwwroot/lib/bootstrap/dist/css'));
+});

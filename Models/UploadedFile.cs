@@ -53,7 +53,7 @@ namespace OnFile.Models
         public string Visibility { get; set; }
 
         //Navigation Properties
-        public int ApplicationUserID { get; set; }
+        public string ApplicationUserID { get; set; }
         public ApplicationUser ApplicationUser { get; set; }
         public ICollection<OptionalPicture> OptionalPictures { get; set; }
 

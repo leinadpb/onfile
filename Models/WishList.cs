@@ -19,7 +19,7 @@ namespace OnFile.Models
         public string Description { get; set; }
 
         //Navigation Properties
-        public int ApplicationUserID { get; set; }
+        public string ApplicationUserID { get; set; }
         public ApplicationUser ApplicationUser { get; set; }
 
         public ICollection<UploadedFile> UploadedFiles { get; set; }
