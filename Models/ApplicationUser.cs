@@ -13,7 +13,7 @@ namespace OnFile.Models
         public string Firstname { get; set; }
 
         [Required(ErrorMessage = "Please, provide your lastname.")]
-        public string Lastanme { get; set; }
+        public string Lastname { get; set; }
 
         [DataType(DataType.Date)]
         [Required(ErrorMessage = "Please, provide your birthdate")]
@@ -38,9 +38,11 @@ namespace OnFile.Models
         public string Description { get; set; }
 
         //Navigation Properties
-        public ICollection<BuyedFile> BuyedFiles { get; set; }
+        public ICollection<BoughtFile> BoughtFiles { get; set; }
         public ICollection<WishList> WishLists { get; set; }
         public ICollection<UploadedFile> UploadedFiles { get; set; }
+        public ICollection<Comment> Comments { get; set; }
+
 
 
 

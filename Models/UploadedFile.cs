@@ -52,6 +52,12 @@ namespace OnFile.Models
         [Required]
         public string Visibility { get; set; }
 
+        [Required]
+        public long FileLength { get; set; }
+
+        [RegularExpression(@"[0-5](\.[0-9])?")]
+        public float Rating { get; set; }
+        
         //Navigation Properties
         public string ApplicationUserID { get; set; }
         public ApplicationUser ApplicationUser { get; set; }
@@ -60,7 +66,10 @@ namespace OnFile.Models
         public int WishListID { get; set; }
         public WishList WishList { get; set; }
 
-        public BuyedFile BuyedFile { get; set; }
+        public BoughtFile BoughtFile { get; set; }
+
+        public ICollection<Comment> Comments { get; set; }
+
 
 
     }

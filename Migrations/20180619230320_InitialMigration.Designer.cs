@@ -8,11 +8,11 @@ using Microsoft.EntityFrameworkCore.Storage.Internal;
 using OnFile.Data;
 using System;
 
-namespace OnFile.Data.Migrations
+namespace OnFile.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20180619132425_ApplicationUserDescriptionAdded")]
-    partial class ApplicationUserDescriptionAdded
+    [Migration("20180619230320_InitialMigration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -152,7 +152,7 @@ namespace OnFile.Data.Migrations
                     b.Property<string>("Firstname")
                         .IsRequired();
 
-                    b.Property<string>("Lastanme")
+                    b.Property<string>("Lastname")
                         .IsRequired();
 
                     b.Property<bool>("LockoutEnabled");
@@ -199,20 +199,43 @@ namespace OnFile.Data.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
-            modelBuilder.Entity("OnFile.Models.BuyedFile", b =>
+            modelBuilder.Entity("OnFile.Models.BoughtFile", b =>
                 {
-                    b.Property<int>("BuyedFileID")
+                    b.Property<int>("BoughtFileID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("ApplicationUserID")
+                        .IsRequired();
+
+                    b.Property<int>("UploadedFileID");
+
+                    b.HasKey("BoughtFileID");
+
+                    b.HasIndex("ApplicationUserID");
+
+                    b.ToTable("BoughtFile");
+                });
+
+            modelBuilder.Entity("OnFile.Models.Comment", b =>
+                {
+                    b.Property<int>("CommentID")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("ApplicationUserID");
 
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasMaxLength(800);
+
                     b.Property<int>("UploadedFileID");
 
-                    b.HasKey("BuyedFileID");
+                    b.HasKey("CommentID");
 
                     b.HasIndex("ApplicationUserID");
 
-                    b.ToTable("BuyedFile");
+                    b.HasIndex("UploadedFileID");
+
+                    b.ToTable("Comment");
                 });
 
             modelBuilder.Entity("OnFile.Models.OptionalPicture", b =>
@@ -245,6 +268,8 @@ namespace OnFile.Data.Migrations
 
                     b.Property<int>("DownloadedTimes");
 
+                    b.Property<long>("FileLength");
+
                     b.Property<DateTime>("LastTimeDownloaded");
 
                     b.Property<string>("MainPictureUrl")
@@ -257,6 +282,8 @@ namespace OnFile.Data.Migrations
                     b.Property<float>("Price");
 
                     b.Property<DateTime>("PublishedDate");
+
+                    b.Property<float>("Rating");
 
                     b.Property<string>("ResourceUrl")
                         .IsRequired()
@@ -345,11 +372,24 @@ namespace OnFile.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("OnFile.Models.BuyedFile", b =>
+            modelBuilder.Entity("OnFile.Models.BoughtFile", b =>
                 {
                     b.HasOne("OnFile.Models.ApplicationUser", "ApplicationUser")
-                        .WithMany("BuyedFiles")
+                        .WithMany("BoughtFiles")
+                        .HasForeignKey("ApplicationUserID")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("OnFile.Models.Comment", b =>
+                {
+                    b.HasOne("OnFile.Models.ApplicationUser", "ApplicationUser")
+                        .WithMany("Comments")
                         .HasForeignKey("ApplicationUserID");
+
+                    b.HasOne("OnFile.Models.UploadedFile", "UploadedFile")
+                        .WithMany("Comments")
+                        .HasForeignKey("UploadedFileID")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("OnFile.Models.OptionalPicture", b =>
@@ -366,7 +406,7 @@ namespace OnFile.Data.Migrations
                         .WithMany("UploadedFiles")
                         .HasForeignKey("ApplicationUserID");
 
-                    b.HasOne("OnFile.Models.BuyedFile", "BuyedFile")
+                    b.HasOne("OnFile.Models.BoughtFile", "BoughtFile")
                         .WithOne("UploadedFile")
                         .HasForeignKey("OnFile.Models.UploadedFile", "UploadedFileID")
                         .OnDelete(DeleteBehavior.Cascade);

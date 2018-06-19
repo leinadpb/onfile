@@ -152,6 +152,27 @@ div {
     .profile-box .content .title {
       margin-top: 1.0em;
       margin-bottom: 1.0em;
+      padding-left: 2.0em;
       font-family: "Merriweather Sans", sans-serif;
       font-weight: 600;
       font-size: 1.5rem; }
+    .profile-box .content .my-uploaded-files {
+      margin-left: 2.0em;
+      margin-right: 2.0em;
+      text-align: center; }
+
+.upload-box {
+  margin-top: 3.0em; }
+  .upload-box .up-content {
+    margin-top: 6.0em;
+    margin-bottom: 2.0em;
+    text-align: center; }
+    .upload-box .up-content .title {
+      color: #24323D;
+      font-family: "Merriweather Sans", sans-serif;
+      text-align: center; }
+    .upload-box .up-content .description {
+      color: #8AAEBE;
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 1.4rem;
+      text-align: center; }

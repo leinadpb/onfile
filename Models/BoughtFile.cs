@@ -6,18 +6,17 @@ using System.Threading.Tasks;
 
 namespace OnFile.Models
 {
-    public class BuyedFile
+    public class BoughtFile
     {
         [Key]
-        public int BuyedFileID { get; set; }
+        public int BoughtFileID { get; set; }
 
         //Navigation Properties
+        [Required]
         public string ApplicationUserID { get; set; }
         public ApplicationUser ApplicationUser { get; set; }
 
         public int UploadedFileID { get; set; }
         public UploadedFile UploadedFile { get; set; }
-
-
     }
 }

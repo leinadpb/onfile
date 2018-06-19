@@ -22,10 +22,10 @@ namespace OnFile.Data
             // For example, you can rename the ASP.NET Identity table names and more.
             // Add your customizations after calling base.OnModelCreating(builder);
 
-            // ApplicationUser - BuyedFile (1 - *)
-            builder.Entity<BuyedFile>()
+            // ApplicationUser - BoughtFile (1 - *)
+            builder.Entity<BoughtFile>()
                 .HasOne(bf => bf.ApplicationUser)
-                .WithMany(au => au.BuyedFiles)
+                .WithMany(au => au.BoughtFiles)
                 .HasForeignKey(bf => bf.ApplicationUserID);
 
             // ApplicationUser - WishList (1 - *)
@@ -46,11 +46,23 @@ namespace OnFile.Data
                 .WithMany(wl => wl.UploadedFiles)
                 .HasForeignKey(uf => uf.WishListID);
 
-            // BuyedFile - UploadedFile (1 - 1)
-            builder.Entity<BuyedFile>()
+            // BoughtFile - UploadedFile (1 - 1)
+            builder.Entity<BoughtFile>()
                 .HasOne(bf => bf.UploadedFile)
-                .WithOne(uf => uf.BuyedFile)
+                .WithOne(uf => uf.BoughtFile)
                 .HasForeignKey<UploadedFile>(bf => bf.UploadedFileID);
+
+            // UploadedFile - Comment (1 - *)
+            builder.Entity<Comment>()
+                .HasOne(cm => cm.UploadedFile)
+                .WithMany(uf => uf.Comments)
+                .HasForeignKey(cm => cm.UploadedFileID);
+
+            // ApplicationUser - Comment (1 - *)
+            builder.Entity<Comment>()
+                .HasOne(cm => cm.ApplicationUser)
+                .WithMany(au => au.Comments)
+                .HasForeignKey(cm => cm.ApplicationUserID);
 
            
         }

@@ -201,14 +201,14 @@ div{
                     font-weight: 600;
                     font-family: $sans-josefin;
                     font-size: 1.0rem;
-                    color:$ligth-color;
+                    color: $ligth-color;
                 }
 
                 .text {
                     font-weight: 300;
                     font-family: $sans-josefin;
                     font-size: 1.0rem;
-                    color:white;
+                    color: white;
                 }
             }
         }
@@ -220,12 +220,43 @@ div{
         display: flex;
         justify-content: space-around;
         background-color: white;
-        .title{
-            margin-top:1.0em;
-            margin-bottom:1.0em;
-            font-family:$sans-merriweather;
-            font-weight:600;
-            font-size:1.5rem;
+
+        .title {
+            margin-top: 1.0em;
+            margin-bottom: 1.0em;
+            padding-left: 2.0em;
+            font-family: $sans-merriweather;
+            font-weight: 600;
+            font-size: 1.5rem;
+        }
+
+        .my-uploaded-files{
+            margin-left:2.0em;
+            margin-right:2.0em;
+            text-align:center;
+        }
+    }
+}
+
+//UPLOAD
+.upload-box {
+    margin-top:3.0em;
+    .up-content {
+        margin-top: 6.0em;
+        margin-bottom: 2.0em;
+        text-align: center;
+
+        .title {
+            color: $primary-color;
+            font-family: $sans-merriweather;
+            text-align: center;
+        }
+
+        .description {
+            color: $secondary-color;
+            font-family: $sans-josefin;
+            font-size: 1.4rem;
+            text-align: center;
         }
     }
 }

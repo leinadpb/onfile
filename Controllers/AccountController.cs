@@ -58,7 +58,7 @@ namespace OnFile.Controllers
             ProfileViewModel ProfileVM = new ProfileViewModel()
             {
                 Firstname = appUser.Firstname,
-                Lastname = appUser.Lastanme,
+                Lastname = appUser.Lastname,
                 Email = appUser.Email,
                 Description = appUser.Description,
                 ProfilePictureUrl = appUser.ProfilePictureUrl
@@ -239,7 +239,7 @@ namespace OnFile.Controllers
                     UserName = model.Email,
                     Email = model.Email,
                     Firstname = model.Firstname,
-                    Lastanme = model.Lastname,
+                    Lastname = model.Lastname,
                     SignInDate = model.SignInDate,
                     Birthdate = model.Birthday
                 };
