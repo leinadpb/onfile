@@ -52,9 +52,18 @@ namespace OnFile.Controllers
         }
 
         [HttpGet]
-        public IActionResult Profile()
+        public async Task<IActionResult> Profile()
         {
-            return View();
+            var appUser = _userManager.GetUserAsync(HttpContext.User).Result;
+            ProfileViewModel ProfileVM = new ProfileViewModel()
+            {
+                Firstname = appUser.Firstname,
+                Lastname = appUser.Lastanme,
+                Email = appUser.Email,
+                Description = appUser.Description,
+                ProfilePictureUrl = appUser.ProfilePictureUrl
+            };
+            return View(ProfileVM);
         }
 
         [HttpPost]

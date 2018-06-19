@@ -1,8 +1,83 @@
-﻿
+﻿@model ProfileViewModel
+
 @{
     ViewData["Title"] = "Profile";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@{ 
+    string _profilePicUrl = Model.ProfilePictureUrl;
+}
+<div class="profile-box">
+    <div class="left-panel">
+        <div class="up-content">
+            @if (_profilePicUrl == null)
+            {
+                <img class="" src="~/images/no_user_default.png" />
+            }
+            else
+            {
+                <img class="" src="@Model.ProfilePictureUrl" />
+            }
+            <div class="fullname">
+                <p><span>@Model.Firstname </span><span>@Model.Lastname</span></p>
+            </div>
+            <div class="description">
+                @if (Model.Description != null)
+                {
+                    <p>@Model.Description</p>
+                }
+                else
+                {
+                    <p>Seller/Buyer</p>
 
-<h2>My Profile</h2>
+                }
+            </div>
+            <div class="top-info" align="center">
+                <div class="row">
+                    <div class="col">
+                        <span class="number">0</span><span class="text"> Uploaded file(s)</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <span class="number">0</span><span class="text"> Buyed file(s)</span>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <hr class="dropdown-divider" />
+            <div class="middle-info">
+
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="row">
+            <div class="col">
+                <div class="title">
+                    My uploaded files
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col">
+                            <img src="~/images/default_file_image.png" class="img-thumbnail rounded" />
+                        </div>
+                        <div class="col">
+                            <img src="~/images/default_file_image.png" class="img-thumbnail rounded" />
+                        </div>
+                        <div class="col">
+                            <img src="~/images/default_file_image.png" class="img-thumbnail rounded" />
+                        </div>
+                        <div class="col">
+                            <img src="~/images/default_file_image.png" class="img-thumbnail rounded" />
+                        </div>
+                        <div class="col">
+                            <img src="~/images/default_file_image.png" class="img-thumbnail rounded" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 

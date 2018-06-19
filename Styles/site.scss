@@ -24,6 +24,16 @@ $serif-kurale: 'Kurale', serif;
 $serif-karla: 'Karla', sans-serif;
 $serif-lora: 'Lora', serif;
 
+//RESET
+body{
+    margin:0px;
+    padding:0px;
+}
+div{
+    margin:0px;
+    padding:0px;
+}
+
 //LAYOUT
 .navbar-inverse{
     a{
@@ -139,6 +149,83 @@ $serif-lora: 'Lora', serif;
         }
         label{
             font-weight:600;
+        }
+    }
+}
+
+//PROFILE
+.profile-box {
+    display: flex;
+    justify-content: center;
+    height: 600px;
+
+    .left-panel {
+        border: 1px solid #fff;
+        width: 30%;
+        display: flex;
+        justify-content: space-around;
+        background-color: $primary-color;
+
+        .up-content {
+            margin: 1.4em;
+
+            img {
+                margin-top: 1.0em;
+                border-radius: 50%;
+                width: 10.4em;
+                height: 10.4em;
+                text-align: center;
+            }
+
+            .fullname {
+                p {
+                    margin-top: 0.9em;
+                    margin-bottom: 0em;
+                    font-family: $sans-josefin;
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    color: $ligth-color;
+                    text-align: center;
+                }
+            }
+
+            .description {
+                p {
+                    text-align: center;
+                    color: gray;
+                }
+            }
+
+            .top-info {
+                .number {
+                    font-weight: 600;
+                    font-family: $sans-josefin;
+                    font-size: 1.0rem;
+                    color:$ligth-color;
+                }
+
+                .text {
+                    font-weight: 300;
+                    font-family: $sans-josefin;
+                    font-size: 1.0rem;
+                    color:white;
+                }
+            }
+        }
+    }
+
+    .content {
+        border: 1px solid #fff;
+        width: 70%;
+        display: flex;
+        justify-content: space-around;
+        background-color: white;
+        .title{
+            margin-top:1.0em;
+            margin-bottom:1.0em;
+            font-family:$sans-merriweather;
+            font-weight:600;
+            font-size:1.5rem;
         }
     }
 }

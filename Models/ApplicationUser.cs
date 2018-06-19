@@ -33,7 +33,10 @@ namespace OnFile.Models
         public string ProfilePictureUrl { get; set; }
 
         public string Sex { get; set; }
-        
+
+        [MaxLength(200, ErrorMessage = "Sorry, description is too long.")]
+        public string Description { get; set; }
+
         //Navigation Properties
         public ICollection<BuyedFile> BuyedFiles { get; set; }
         public ICollection<WishList> WishLists { get; set; }

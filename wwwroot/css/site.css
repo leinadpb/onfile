@@ -5,6 +5,14 @@
     TYPE: .SCSS
 */
 @import url("https://fonts.googleapis.com/css?family=Arvo|Josefin+Sans|Karla|Kurale|Lora|Merriweather|Merriweather+Sans|Raleway|Raleway+Dots");
+body {
+  margin: 0px;
+  padding: 0px; }
+
+div {
+  margin: 0px;
+  padding: 0px; }
+
 .navbar-inverse a {
   color: #DACAB3; }
 
@@ -95,3 +103,55 @@
     color: white; }
   .no-main-page .page-form label {
     font-weight: 600; }
+
+.profile-box {
+  display: flex;
+  justify-content: center;
+  height: 600px; }
+  .profile-box .left-panel {
+    border: 1px solid #fff;
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #24323D; }
+    .profile-box .left-panel .up-content {
+      margin: 1.4em; }
+      .profile-box .left-panel .up-content img {
+        margin-top: 1.0em;
+        border-radius: 50%;
+        width: 10.4em;
+        height: 10.4em;
+        text-align: center; }
+      .profile-box .left-panel .up-content .fullname p {
+        margin-top: 0.9em;
+        margin-bottom: 0em;
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #F2E1C7;
+        text-align: center; }
+      .profile-box .left-panel .up-content .description p {
+        text-align: center;
+        color: gray; }
+      .profile-box .left-panel .up-content .top-info .number {
+        font-weight: 600;
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 1.0rem;
+        color: #F2E1C7; }
+      .profile-box .left-panel .up-content .top-info .text {
+        font-weight: 300;
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 1.0rem;
+        color: white; }
+  .profile-box .content {
+    border: 1px solid #fff;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    background-color: white; }
+    .profile-box .content .title {
+      margin-top: 1.0em;
+      margin-bottom: 1.0em;
+      font-family: "Merriweather Sans", sans-serif;
+      font-weight: 600;
+      font-size: 1.5rem; }
