@@ -32,7 +32,8 @@ namespace OnFile.Models
 
         public string ProfilePictureUrl { get; set; }
 
-
+        public string Sex { get; set; }
+        
         //Navigation Properties
         public ICollection<BuyedFile> BuyedFiles { get; set; }
         public ICollection<WishList> WishLists { get; set; }

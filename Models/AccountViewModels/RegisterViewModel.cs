@@ -23,5 +23,22 @@ namespace OnFile.Models.AccountViewModels
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [Required]
+        [Display(Name = "First name")]
+        public string Firstname { get; set; }
+
+        [Required]
+        [Display(Name = "Last name")]
+        public string Lastname { get; set; }
+
+        [Required]
+        [DataType(DataType.Date)]
+        [Display(Name = "Birthdate")]
+        public DateTime Birthday { get; set; }
+
+        [Required]
+        public DateTime SignInDate { get; set; }
+
     }
 }
