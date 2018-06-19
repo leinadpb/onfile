@@ -1,0 +1,12 @@
+C:\Users\LEINAD\source\repos\OnFile\OnFile\bin\Debug\netcoreapp2.0\OnFile.deps.json
+C:\Users\LEINAD\source\repos\OnFile\OnFile\bin\Debug\netcoreapp2.0\OnFile.runtimeconfig.json
+C:\Users\LEINAD\source\repos\OnFile\OnFile\bin\Debug\netcoreapp2.0\OnFile.runtimeconfig.dev.json
+C:\Users\LEINAD\source\repos\OnFile\OnFile\bin\Debug\netcoreapp2.0\OnFile.dll
+C:\Users\LEINAD\source\repos\OnFile\OnFile\bin\Debug\netcoreapp2.0\OnFile.pdb
+C:\Users\LEINAD\source\repos\OnFile\OnFile\obj\Debug\netcoreapp2.0\OnFile.csprojAssemblyReference.cache
+C:\Users\LEINAD\source\repos\OnFile\OnFile\obj\Debug\netcoreapp2.0\OnFile.csproj.CoreCompileInputs.cache
+C:\Users\LEINAD\source\repos\OnFile\OnFile\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\LEINAD\source\repos\OnFile\OnFile\obj\Debug\netcoreapp2.0\OnFile.AssemblyInfoInputs.cache
+C:\Users\LEINAD\source\repos\OnFile\OnFile\obj\Debug\netcoreapp2.0\OnFile.AssemblyInfo.cs
+C:\Users\LEINAD\source\repos\OnFile\OnFile\obj\Debug\netcoreapp2.0\OnFile.dll
+C:\Users\LEINAD\source\repos\OnFile\OnFile\obj\Debug\netcoreapp2.0\OnFile.pdb

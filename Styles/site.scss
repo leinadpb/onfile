@@ -1,0 +1,44 @@
+﻿/*
+    MAIN STYLESHEET
+    AUTHOR: DANIEL J. PEÑA
+    TYPE: .SCSS
+*/
+@import url('https://fonts.googleapis.com/css?family=Arvo|Josefin+Sans|Karla|Kurale|Lora|Merriweather|Merriweather+Sans|Raleway|Raleway+Dots');
+
+//Colors
+$primary-color: #24323D;
+$secondary-color: #8AAEBE;
+$accent-color: #868C8A;
+$ligth-color: #F2E1C7;
+$ligth2-color: #DACAB3;
+
+//Fonts
+$sans-josefin:'Josefin Sans', sans-serif;
+$serif-merriweather: 'Merriweather', serif;
+$sans-merriweather: 'Merriweather Sans', sans-serif;
+$serif-arvo: 'Arvo', serif;
+$serif-raleway: 'Raleway', sans-serif;
+$coursive-raleway: 'Raleway Dots', cursive;
+$serif-kurale: 'Kurale', serif;
+$serif-karla: 'Karla', sans-serif;
+$serif-lora: 'Lora', serif;
+
+.main-content{
+    text-align:center;
+    margin-top:1.25em;
+    margin-bottom:1.0em;
+    padding-left:0.30em;
+    padding-right:0.30em;
+    .title{
+        h1{
+            color: $primary-color;
+            font-size:1.83rem;
+            font-family:$sans-merriweather;
+        }
+        p{
+            color:$secondary-color;
+            font-size:1.12rem;
+            font-family:$serif-merriweather;
+        }
+    }
+}
