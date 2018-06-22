@@ -18,11 +18,13 @@ E-commerce
 - [x] Review and correct model's realtions. (D.C)
 - [x] Create Upload page. (D.P)
 - [x] Create User-Information sidebar in Profile page. (D.P)
-- [ ] Save uploaded file (and optional picture is required) info to database.
-- [ ] Improve home page design.
-- [ ] Create content sidebar in Profile page.
-- [ ] Allow user's password without symbols.
-- [ ] Create Search page (for searching file).
+- [x] Create View Model for Profile Page. (D.P)
+- [x] Create View Model por Upload Page. (D.P)
+- [ ] Save uploaded file (and optional picture is required) info to database. (D.P)
+- [ ] Improve home page design. (D.C)
+- [ ] Create content sidebar in Profile page. (D.C)
+- [ ] Allow user's password without symbols. (D.C)
+- [ ] Create Search page (for searching file). (D.C)
 
 ## Authors:
 * Daniel Peña (D.P)
