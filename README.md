@@ -25,6 +25,9 @@ E-commerce
 - [ ] Create content sidebar in Profile page. (D.C)
 - [ ] Allow user's password without symbols. (D.C)
 - [ ] Create Search page (for searching file). (D.C)
+- [x] Create Store Controller. (D.P) 
+- [x] Integrate AWS S3 Bucket for File Storage. (D.P)
+- [x] Upload files to AWS S3 Bucket in Uplaod Page. (D.P)
 
 ## Authors:
 * Daniel Peña (D.P)
