@@ -1,7 +1,7 @@
 # ONFILE
 E-commerce
 
-## Services
+## Used Services
 * AWS S3 Bucket - File storage
 
 ## To Do List
