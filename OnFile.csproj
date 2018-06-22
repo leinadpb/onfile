@@ -7,6 +7,8 @@
 
 
   <ItemGroup>
+    <PackageReference Include="AWSSDK.Core" Version="3.3.24.1" />
+    <PackageReference Include="AWSSDK.S3" Version="3.3.18.4" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.3" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.4" PrivateAssets="All" />
@@ -20,6 +22,7 @@
 
   <ItemGroup>
     <Folder Include="Data\Migrations\" />
+    <Folder Include="wwwroot\resources\" />
   </ItemGroup>
 
 </Project>

@@ -42,7 +42,6 @@ namespace OnFile.Models
         public DateTime PublishedDate { get; set; }
 
         [DataType(DataType.Date)]
-        [Required]
         public DateTime LastTimeDownloaded { get; set; }
 
         [StringLength(1200, ErrorMessage = "The provided string is too long.")]
@@ -50,10 +49,10 @@ namespace OnFile.Models
         public string ResourceUrl { get; set; }
 
         [Required]
-        public string Visibility { get; set; }
+        public bool Visible { get; set; }
 
         [Required]
-        public long FileLength { get; set; }
+        public float FileLength { get; set; }
 
         [RegularExpression(@"[0-5](\.[0-9])?")]
         public float Rating { get; set; }

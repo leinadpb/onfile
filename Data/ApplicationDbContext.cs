@@ -15,6 +15,14 @@ namespace OnFile.Data
         {
         }
 
+        public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+        public DbSet<BoughtFile> BoughtFiles { get; set; }
+        public DbSet<Comment> Comments { get; set; }
+        public DbSet<OptionalPicture> OptionalPictures { get; set; }
+        public DbSet<UploadedFile> UploadedFiles { get; set; }
+        public DbSet<WishList> WishLists { get; set; }
+
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);

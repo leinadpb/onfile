@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using OnFile.Data;
 using OnFile.Models;
 using OnFile.Services;
+using Microsoft.Extensions.FileProviders;
+using System.IO;
 
 namespace OnFile
 {
@@ -49,6 +51,10 @@ namespace OnFile
 
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
+
+            services.AddSingleton<IFileProvider>(
+            new PhysicalFileProvider(
+                Path.Combine(Directory.GetCurrentDirectory(), "wwwroot")));
 
             services.AddMvc();
         }

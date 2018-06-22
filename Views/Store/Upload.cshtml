@@ -3,6 +3,22 @@
     ViewData["Title"] = "Upload";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@if (ViewBag.FaultInformation != null)
+{
+    <div class="alert alert-danger">@ViewBag.FaultInformation</div>
+}
+@if (ViewBag.SuccessInformation != null)
+{
+    <div class="alert alert-success">@ViewBag.SuccessInformation</div>
+}
+@if (ViewBag.dbSuccess != null)
+{
+    <div class="alert alert-success">@ViewBag.dbSuccess</div>
+}
+@if (ViewBag.dbError != null)
+{
+    <div class="alert alert-danger">@ViewBag.dbError</div>
+}
 <br />
 <div class="upload-box">
     <div class="up-content" align="center">
@@ -14,7 +30,7 @@
         </div>
     </div>
     <div class="form-content">
-        <form method="post" asp-controller="Store" asp-action="Upload">
+        <form method="post" asp-controller="Store" asp-action="Upload" enctype="multipart/form-data">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col"></div>
@@ -24,15 +40,32 @@
                             <input asp-for="ResourceUrl" type="file" class="form-control" />
                             <span asp-validation-for="ResourceUrl" class="text-danger"></span>
                         </div>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <input type="checkbox" value="true" aria-label="Custom thumbnail" name="withCustomThumbnail">
+                                    <input type="hidden" value="false" name="withCustomThumbnail" />
+                                </div>
+                            </div>
+                            <input type="file" accept="image/x-png,image/gif,image/jpeg" class="form-control" name="CustomThumbnail" aria-label="Select custom file's thumbnail.">
+                        </div>
                         <div class="form-group">
                             <label asp-for="Name"></label>
                             <input asp-for="Name" class="form-control" />
                             <span asp-validation-for="Name" class="text-danger"></span>
                         </div>
                         <div class="form-group">
+                            <label asp-for="ShortDescription"></label>
+                            <input asp-for="ShortDescription" class="form-control" />
+                            <span asp-validation-for="ShortDescription" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
                             <label asp-for="Description"></label>
-                            <input asp-for="Description" class="form-control" />
+                            <textarea asp-for="Description" class="form-control" rows="3"></textarea>
                             <span asp-validation-for="Description" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-block btn-primary" type="submit">Upload file</button>
                         </div>
                     </div>
                     <div class="col"></div>
