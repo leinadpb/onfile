@@ -29,7 +29,8 @@ E-commerce
 - [x] Integrate AWS S3 Bucket for File Storage. (D.P)
 - [x] Upload files to AWS S3 Bucket in Uplaod Page. (D.P)
 - [ ] Prevent Cross-Site Request Forgery (XSRF/CSRF) in: Controller:Store; Action:Upload. (D.P)
-- [x] Integrate SASS for CSS Style and Gulp for SCSS compilation into CSS. (D.P) 
+- [x] Integrate SASS for CSS Style and Gulp for SCSS compilation into CSS. (D.P)
+- [ ] Create Sell model. (D.C)
 
 ## Authors:
 * Daniel Peña (D.P)
